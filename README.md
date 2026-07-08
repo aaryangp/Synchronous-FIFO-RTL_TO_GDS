@@ -1,4 +1,4 @@
-# UVM Verification and Synthesis of a Parameterized Synchronous FIFO
+# UVM Verification and GDS flow of a Parameterized Synchronous FIFO
 
 A complete RTL-to-GDS verification project implementing a parameterized **Synchronous FIFO** in Verilog and verifying its functionality using a reusable **SystemVerilog UVM Testbench**. The verified RTL is synthesized using **Yosys**, mapped to the **Sky130 HD Standard Cell Library**, and analyzed using **OpenSTA** for timing and power estimation.Then Using OpenROAD and KLayout final GDS file is created and Post layout STA is done to verify its functionality.
 
