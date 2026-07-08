@@ -1,0 +1,30 @@
+
+read_verilog fifo_synch.v
+hierarchy -top synch_fifo_bram
+
+#flatten 
+
+proc
+opt
+#fsm
+#opt
+memory
+opt
+memory_map
+opt
+techmap
+opt
+
+# sequential mapping
+dfflibmap -liberty /home/aari/verilog/nangate45_fast.lib
+opt
+
+# combinational mapping
+abc -liberty /home/aari/verilog/nangate45_fast.lib 
+opt
+
+clean
+stat -liberty /home/aari/verilog/nangate45_fast.lib 
+write_verilog fifo_synch_netlist.v
+
+show -format dot -prefix fifo_synch_netlist
